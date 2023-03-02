@@ -7,7 +7,9 @@ if (G5_IS_MOBILE) {
     return;
 }
 
+
 include_once(G5_THEME_PATH.'/head.php');
+$youtube_id = 'bjwQZDtH7rk';
 
 ?>
 
@@ -23,6 +25,10 @@ include_once(G5_THEME_PATH.'/head.php');
 	.popbtn,.requestbtn{cursor:pointer;}
 </style>
 
+<link rel="stylesheet" href="<?=G5_THEME_URL?>/css/main.css">
+
+
+
 <section id="pop_pay" style="display:none;">
 	<?include_once(G5_THEME_PATH.'/service_payload.php');?>
 </section>
@@ -30,8 +36,6 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-- Home Section -->
-
-
 <section id="home" class="main-visual">
     
 	 <!--<div class="overlay fadeout"></div>-->
@@ -41,12 +45,14 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="row">
                <article class="col-md-6 col-xs-7 col-12">
 			   		
-			   		<h2 class="to-animate">푸라닭 치킨은 철저한 시장조사와 수많은<br> 연구를 통해 만들어낸 브랜드입니다.</h2>
-					<h4 class="to-animate">치킨에서 보기 힘든 "요리와 같은 치킨" 퀄리티뿐 아니라 <br>전문화된 디자인으로 보는 맛을 더했습니다.</h4>
-					<h4 class="to-animate">치킨, 요리가 되다. 푸라닭 치킨<br>푸라닭의 밝은 미래와 함께할 가맹점 사장님을 응원합니다.</h4>
-
+			   		<h2 class="to-animate">치킨,요리가되다</h2>
+					<h4 class="to-animate">푸라닭 치킨</h4>
+					<h4 class="to-animate">
+						<iframe width='443px' height='294px'; id=ytPlayer src=https://www.youtube.com/embed/?playlist=<?php echo $youtube_id; ?>&loop=1&autoplay=1&mute=1&showinfo=0&modestbranding=0&disablekb=1&controls=1  showinfo=0 frameborder=0 allowfullscreen></iframe>
+					</h4>
+<!-- 
                     <a href="javascript:moveTo('#main_request');" class="smoothScroll btn btn10"><span>가맹문의</span> <div class="transition"></div></a>
-					<a class="smoothScroll btn popbtn btn10"><span>가맹비용</span> <div class="transition"></div></a>
+					<a class="smoothScroll btn popbtn btn10"><span>가맹비용</span> <div class="transition"></div></a> -->
                </article>
           </div>
      </div>
@@ -60,6 +66,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <?php
 include_once(G5_THEME_PATH.'/main2/main.php');
 include_once(G5_THEME_PATH.'/main2/main_design_brand.php');
+include_once(G5_THEME_PATH.'/main2/prize_slide.php');
 include_once(G5_THEME_PATH.'/main2/main_banner_menu.php');
 ?>
 
@@ -92,11 +99,15 @@ function checkFrm(obj) {
           <div class="row">
 			
 	
-			<div class="main_introduce_title">
+			<!-- <div class="main_introduce_title">
 				<h3 class="text-center">가맹문의</h3>
-			</div>
+			</div> -->
 
 			<div class="main_contact">
+				<div class='col-xs-12 col-md-6 text-center'>
+					<img src="<?=G5_THEME_URL?>/img/new/15/main_15_left_banner.jpg"/>
+				</div>
+
 				<form action="<?=G5_BBS_URL?>/write_update.php" class="" id="reservation_form" method="post" onsubmit="return checkFrm(this);">
 				<input type='hidden' name='bo_table' value="reservation">
 				<input type='hidden' name='token' value='<?php echo get_write_token("reservation"); ?>'>
@@ -104,28 +115,29 @@ function checkFrm(obj) {
 				<input type='hidden' name="wr_content" value="상담 문의가 접수되었습니다.">
 				<input type='hidden' name="wr_name" value="이름"  placeholder="이름">
 				<input type='hidden' name="wr_7" value="1" >
-				
-					<fieldset class="col-xs-12"> 
-						<div class="col-md-25 col-sm-6 col-xs-12 text-in">
-							<label for="" class="hide">이름(필수)</label>
-							<input type="text" value="" name="wr_1" placeholder="이름(필수)"  required>
+					
+					<fieldset class="col-xs-12 col-md-6"> 
+						<div class="col-xs-12 text-in">
+							
+							<label for="" class="">이름 <i class='require'>*</i></label>
+							<input type="text" value="" name="wr_1" placeholder="이름"  required>
 						</div>
 
-						<div class="col-md-25 col-sm-6 col-xs-12 text-in">
-							<label for="" class="hide">연락처(필수)</label>
-							<input type="text" value="" name="wr_2" placeholder="연락처(필수)"  required>
+						<div class="col-xs-12 text-in">
+							<label for="" class="">연락처 <i class='require'>*</i></label>
+							<input type="text" value="" name="wr_2" placeholder="연락처"  required>
 						</div>
 
-						<div class="col-md-25 col-sm-12 col-xs-12 text-in">
-							<label for="" class="hide">창업예산(선택)</label>
-							<input type="text" value="" name="wr_3" placeholder="창업예산(선택)">
+						<div class="col-xs-12 text-in">
+							<label for="" class="">보유자본금</label>
+							<input type="text" value="" name="wr_3" placeholder="보유자본금">
 						</div>
 						
 
 
 
 						<div class="contact_form text-in">
-							<div class="col-md-25 col-sm-6 select_sido">
+							<div class="col-xs-6 select_sido">
 								<label for="sido1" class="text-right forD" >희망지역
 									<span class="sub_label">(선택)</span>
 								</label>
@@ -133,7 +145,7 @@ function checkFrm(obj) {
 								<select class="Address_D col-xs-6 custom-select" id="sido1" title="전체" name="sido1" ></select>
 							</div>
 
-							<div class="col-md-25 col-sm-6 col-xs-6">
+							<div class="col-xs-6">
 								<label for="gugun1" class="hide" class="sound_only">세부지역(시/구/군)</label>
 								<select class="Address_S custom-select" id="gugun1" title="선택하세요" name='gugun1'></select>
 							</div>
@@ -311,272 +323,6 @@ function checkFrm(obj) {
 </div>
 
 
-<style>
-
-
-.main-visual {
-   background: url('<?php echo G5_THEME_URL; ?>/img/landing/main_wide_0623.jpg') no-repeat;
-   background-position:30% top !important; 
-   height: 93vh;
-   top:20px;
-   font-weight:900;
-}
-.main-visual .container article{
-	padding:10px 10px 10px 15px;
-	background:rgba(91,73,49,0.4);
-}
-
-@media (max-width: 768px) {
-	
-	.main-visual .container{
-		width:100%;
-	}
-}
-
-
-
-/* main- brand Responsible*/
-#quickmenu{right:30px;top:273px;position:absolute;width:120px;}
-
-#agreement_con{
-	display:none;
-}
-
-.agreement_txt{
-	border:1px solid #fff;
-	min-height:300px;
-	background:#fff;
-	overflow:auto;
-}
-
-#main_request{
-	padding:30px 0;
-	background:#222;
-	color:white;
-}
-
-#main_request .main_introduce_title{margin:30px 0;}
-
-
-.contact_btn{
-	padding:0 112px;
-	background:#7b685a;
-	border:0;
-	border-radius:0;
-	color:white;
-	box-shadow:none;
-	font-size:20px;
-}
-
-
-#main_request .container{
-	padding:0 10px; 
-	margin-top:10px;
-	color:white;
-}
-
-#main_request .select_container{
-	
-	border:1px solid rgba(255,255,255,0.3);
-	padding:30px 10px;
-}
-
-#main_request .select_box{
-	background:#393939;
-	padding:10px;
-	line-height:20px;
-}
-
-#main_request .box_container{
-	padding:0 10px;
-	height: 100%;
-}
-
-#main_request .select_box h6{
-	font-size:0.9em;
-	padding-bottom:10px;
-	border-bottom:1px solid rgba(255,255,255,0.5)
-}
-
-#main_request .select_box label{
-	clear:both;
-	display:block;
-	font-size:0.8em;
-	color:white;
-	padding-top:0;
-		padding-bottom:0;
-
-}
-
-.white{color:white !important}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	#main_request .select_box label{
-			margin-top:3px;
-				margin-bottom:3px;
-	}
-}
-
-#main_request .select_sido{
-	text-align:right;
-
-}
-
-#main_request .contact_agree{
-	clear:both;
-	padding:20px 0 ;
-	display: flex;
-}
-
-#main_request .contact_form:after{
-	clear:both;
-}
-
-#main_request .select_sido label.forD{
-	color:white;
-	display:inline-block;
-	vertical-align:middle;
-	margin-right:3%;
-	line-height:15px;
-	margin-bottom:0;
-	padding-top:10px;
-	float:left;
-}
-
-#pop_pay{display:none;}
-
-#main_request .placeholer{
-	color:#000;
-}
-
-#main_request  .main_contact .text_box{
-		display:table-cell;vertical-align:middle;
-	}
-
-.g-recaptcha{margin:0 auto;text-align:center;display:block;width:304px;}
-
-
-@media screen and (min-width: 994px){
-	#main_request  .main_contact .col-md-25{
-		width:20%;
-		min-height:50px;
-		padding:10px;
-		display:inline-block;
-		float:left;
-	}
-
-	#main_request  .main_contact .select_sido{
-		padding-right:0;
-	}
-
-	#main_request  .main_contact .col-md-50{
-		width:50%;
-		min-height:50px;
-	}
-
-	#main_request  .main_contact .col-md-5{
-		width:40%;
-	}
-
-	#main_request .text_box, #main_request .select_box{
-		height:340px;
-	}
-	.mdbr{clear:both;display: block;}
-}
-
-
-
-@media screen and (min-width: 1201px){
-	
-	#main_request .Address_D{
-		width:70%;display:inline-block;
-	}
-	#main_request .Address_D.col-xs-6{width:70%}
-	#main_request .sub_label{font-size:0.5em;line-height:15px;display:block;}
-
-	#main_request .text_box, #main_request .select_box{
-		height:340px;
-	}
-	#pop_pay{display:none;width:1200px}
-
-	
-}
-
-
-@media screen and (max-width: 1680px) {
-	
-}
-
-@media screen and (max-width: 1200px) {
-	#main_request .select_sido label.forD{
-		position:relative;margin-top:-30px; 
-	}
-
-	
-}
-
-@media screen and (max-width: 993px) {
-	
-	#main_request .text-in{margin-top:20px;}
-	#main_request .contact_form{clear:both;margin-top:40px;float:left;width:100%;}
-	#main_request .contact_form .forD{float:left;}
-	#main_request  .main_contact .col-md-25.select_box{
-		height:auto;
-	}
-	#main_request .select_sido label.forD{clear:both;position:relative;width:100%;text-align:left;}
-	#main_request .container .text-box_con{width:100%;}
-	
-	#quickmenu{top:100px;right:10px;}
-}
-
-@media screen and (min-width: 767px){
-	#main_request .Address_D{
-		width:100%;
-	}
-	
-	
-	.main-visual .container{
-		position:absolute;
-		top:130px;
-		left:4%;
-	}
-}
-
-@media screen and (min-width: 1800px){
-	.main-visual{height:93.5vh;background-position:30% 10% !important;}
-	.main-visual .container{left:10vw}
-}
-
-@media screen and (max-width: 736px) {
-	#pop_pay {width:100%;font-size:small;}
-	#pop_pay .cate{width:auto;min-width:110px;}
-	footer address{padding:10px;font-size:0.8em;}
-	.price{min-width:120px !important;}
-}
-
-@media (max-width: 414px) {
-	#banner_btn .banner{
-		background-size:26% !important;
-		padding:5% 3% 5% 40%;
-		height:115px;
-	}
-	.main-visual{height:88vh }
-	#banner_btn .banner dt{font-size:1.2em}
-	#banner_btn .banner dd{font-size:0.8em}
-	
-}
-
-@media (max-width: 650px) {
-	
-}
-
-@media (max-width: 768px) {
-	#quickmenu{display:none;}
-	.main-visual{background-position:45% bottom !important;height:91vh }
-	.main-visual .container{}
-	.col-12{width:100%;margin-top:30%;}
-}
-</style>
 
 
 <script>

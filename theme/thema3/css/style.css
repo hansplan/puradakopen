@@ -1,5 +1,5 @@
 
-/* ÃÊ±âÈ­ */
+/* ï¿½Ê±ï¿½È­ */
 
 @import url( "http://fonts.googleapis.com/earlyaccess/notosanskr.css" );
 
@@ -9,23 +9,23 @@
 }
 */
 
-/*³ª´®¹Ù¸¥°íµñ
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ï¿½ï¿½
 @import url(fonts.css);
 */
 
-³ª´®½ºÄù¾î
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 @import url(/puradak/css/nanumsquare.css);
 
-/*³ª´®½ºÄù¾î¶ó¿îµå
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 */
 
 
-/* ÃÊ±âÈ­ */
+/* ï¿½Ê±ï¿½È­ */
 @charset "utf-8";
 
 
-/* ÃÊ±âÈ­ */
+/* ï¿½Ê±ï¿½È­ */
 html {overflow-y:scroll}
 body {margin:0;padding:0;font-size:0.75em;height:100%;font-family:sans-serif; }
 body {
@@ -190,7 +190,7 @@ li{
 }
 
 
-/*¾Ö´Ï¸ÞÀÌ¼Ç*/
+/*ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½*/
 @-webkit-keyframes intro_bg_out  { 0% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes intro_bg_out  { 0% { opacity: 1; } 100% { opacity: 0; } }
 
@@ -402,7 +402,7 @@ li{
 }
 
 .main-brand {
-  background: url('../img/landing/main_brand_bg.jpg') repeat-x;
+  /* background: url('../img/landing/main_brand_bg.jpg') repeat-x; */
 }
 
 .main-brand_line{
@@ -793,7 +793,7 @@ footer .footer-copyright {
 }
 
 
-/* Ä¸Ã­ ÀÚµ¿µî·Ï(ÀÔ·Â)¹æÁö ±âº» -pc */
+/* Ä¸Ã­ ï¿½Úµï¿½ï¿½ï¿½ï¿½(ï¿½Ô·ï¿½)ï¿½ï¿½ï¿½ï¿½ ï¿½âº» -pc */
 #captcha {display:inline-block;position:relative}
 #captcha legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden;}
 #captcha #captcha_img {width:160px;height:60px;border:1px solid #e9e9e9;vertical-align:top;padding:0;margin:0}
@@ -809,7 +809,7 @@ footer .footer-copyright {
 }
 #captcha #captcha_info {display:block;margin:5px 0 0;font-size:0.95em;letter-spacing:-0.1em}
 
-/* Ä¸Ã­ ÀÚµ¿µî·Ï(ÀÔ·Â)¹æÁö ±âº» - mobile */
+/* Ä¸Ã­ ï¿½Úµï¿½ï¿½ï¿½ï¿½(ï¿½Ô·ï¿½)ï¿½ï¿½ï¿½ï¿½ ï¿½âº» - mobile */
 #captcha.m_captcha audio {display:block;margin:0 0 5px;width:187px}
 #captcha.m_captcha #captcha_img {width:160px;height:60px;border:1px solid #e9e9e9;margin-bottom:3px;margin-top:5px;display:block;}
 #captcha.m_captcha #captcha_reload {position:static;margin:0;padding:0;width:31px;height:31px;border:0;background:transparent;vertical-align:middle;overflow:hidden;cursor:pointer;background:url('../../../img/captcha.png') no-repeat  0 -30px;text-indent:-999px}

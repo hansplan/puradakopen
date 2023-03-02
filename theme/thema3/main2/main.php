@@ -2,13 +2,13 @@
 <section id="main-brand" class="main-brand">
      <div class="container">
           <div class="row">
-			   <div class="col-md-5 brand_left"> <img src="<?php echo G5_THEME_URL; ?>/img/landing/brand_logo2.png" alt=""></div>
+				<div class='col-xs-12'><img src="<?php echo G5_THEME_URL; ?>/img/new/2/main_2_slogan.jpg" alt=""></div>
+			   <!-- <div class="col-md-5 brand_left"> <img src="<?php echo G5_THEME_URL; ?>/img/landing/brand_logo2.png" alt=""></div>
 
                <article class="col-md-7 brand_right">
-				
 					<h3 class="brand_title">치킨, 요리가 되다. <span class="br">푸라닭 치킨</span></h3>
 					<h4 class="desc brand_desc">푸라닭 치킨은 PURA(순수한)+DAK(닭)이라는 두 단어를 <br>조합하여 만든 정식 출원된 브랜드로 정직하고 순수하게 <br>최고의 치킨을 요리하여 고객에게 선사하겠다는 마음가짐을 뜻합니다.</h4>	
-               </article>
+               </article> -->
           </div>
      </div>
 </section>

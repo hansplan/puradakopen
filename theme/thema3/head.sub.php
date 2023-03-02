@@ -32,7 +32,8 @@ header("Pragma: no-cache"); // HTTP/1.0
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <?php
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
