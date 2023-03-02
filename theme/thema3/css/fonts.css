@@ -1,0 +1,52 @@
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: url(/puradak/css/font/NanumBarunGothicUltraLight.eot);
+  src: local('Nanum Barun Gothic UltraLight'),
+       local('NanumBarunGothicUltraLight'),
+       url(/puradak/css/font/NanumBarunGothicUltraLight.eot?#iefix) format('embedded-opentype'),
+       url(/puradak/css/font/NanumBarunGothicUltraLight.woff2) format('woff2'),
+       url(/puradak/css/font/NanumBarunGothicUltraLight.woff) format('woff'),
+       url(/puradak/css/font/NanumBarunGothicUltraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/puradak/css/font/NanumBarunGothicLight.eot);
+  src: local('Nanum Barun Gothic Light'),
+       local('NanumBarunGothicLight'),
+       url(/puradak/css/font/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+       url(/puradak/css/font/NanumBarunGothicLight.woff2) format('woff2'),
+       url(/puradak/css/font/NanumBarunGothicLight.woff) format('woff'),
+       url(/puradak/css/font/NanumBarunGothicLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/puradak/css/font/NanumBarunGothic.eot);
+  src: local('Nanum Barun Gothic'),
+       local('NanumBarunGothic'),
+       url(/puradak/css/font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(/puradak/css/font/NanumBarunGothic.woff2) format('woff2'),
+       url(/puradak/css/font/NanumBarunGothic.woff) format('woff'),
+       url(/puradak/css/font/NanumBarunGothic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/puradak/css/font/NanumBarunGothicBold.eot);
+  src: local('Nanum Barun Gothic Bold'),
+       local('NanumBarunGothicBold'),
+       url(/puradak/css/font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(/puradak/css/font/NanumBarunGothicBold.woff2) format('woff2'),
+       url(/puradak/css/font/NanumBarunGothicBold.woff) format('woff'),
+       url(/puradak/css/font/NanumBarunGothicBold.ttf) format('truetype');
+}
