@@ -4,6 +4,10 @@ include_once('./_common.php');
 define('_INDEX_', true);
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
+
+defined('G5_THEME_PATH',"F:/AutoSet10/public_html/p2p_puradak/theme/thema3");
+
+
 if(defined('G5_THEME_PATH')) {
     require_once(G5_THEME_PATH.'/index_new.php');
     return;

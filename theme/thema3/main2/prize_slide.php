@@ -6,22 +6,42 @@
      <div class="container">
         <div class="row">
             <article class="col-xs-12 text-center">
-				<h2>AWARD HISTORY</h2>
+				<h2><img src="<?=G5_THEME_URL?>/img/new/8/prize_title.png" title="AWARD HISTORY"/></h2>
 			</article>
 
             <div class="col-xs-12 swiper" >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" scrollbar-hide="true">
-                        <img src='<?=G5_THEME_URL?>/img/new/11/prize_1.jpg'/>
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_1.png'/>
                     </div>
                     <div class="swiper-slide">
-                        <img src='<?=G5_THEME_URL?>/img/new/11/prize_2.jpg'/>
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_2.png'/>
                     </div>
                     <div class="swiper-slide">
-                        <img src='<?=G5_THEME_URL?>/img/new/11/prize_3.jpg'/>
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_3.png'/>
                     </div>
                     <div class="swiper-slide">
-                        <img src='<?=G5_THEME_URL?>/img/new/11/prize_4.jpg'/>
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_4.png'/>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_5.png'/>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_6.png'/>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_7.png'/>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_8.png'/>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src='<?=G5_THEME_URL?>/img/new/8/prize_9.png'/>
                     </div>
                 </div>
                 
@@ -43,8 +63,8 @@
 
 <style>
     .prize{background:#eee}
-    .prize .container{padding:30px 0;}
-    .swiper{width:100%;height:300px;}
+    .prize .container{padding:40px 0;}
+    .swiper{width:100%;height:300px;margin-left:10px;}
     .swiper .swiper-pagination{margin:30px 0;}
     .swiper img{text-align:center;margin:0 auto;display:block}
     .swiper .swiper-pagination-bullet-active{background:#dda246;width:12px;height:12px;vertical-align:middle}
@@ -56,8 +76,9 @@ const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       slidesPerView : 2,
       spaceBetween : 0, 
-      loop: true,
+      loop: false,
       loopAdditionalSlides : 4,
+      
      /*  autoplay : { 
         delay : 3000,
         disableOnInteraction : false,
@@ -65,7 +86,7 @@ const swiper = new Swiper('.swiper', {
      autoHeight : true, 
      scrollbar: false,
      slideToClickedSlide : false,
-
+     slidesPerGroup :2,
       pagination: {
         el: '.swiper-pagination',
         clickable : true, 
@@ -99,13 +120,14 @@ const swiper = new Swiper('.swiper', {
             768 : {
 
             slidesPerView : 3,
+            slidesPerGroup :3,
 
             },
 
-            900 : {
+            1200 : {
 
             slidesPerView : 4,
-
+            slidesPerGroup :4,
             },
         }
 

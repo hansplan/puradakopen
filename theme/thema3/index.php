@@ -20,54 +20,55 @@ $youtube_id = 'bjwQZDtH7rk';
 
 <script src="https://kit.fontawesome.com/5ae2835c3a.js" crossorigin="anonymous"></script>
 
-<!-- POP Section -->
-<style>
-	.popbtn,.requestbtn{cursor:pointer;}
-</style>
 
 <link rel="stylesheet" href="<?=G5_THEME_URL?>/css/main.css">
 
 
 
-<section id="pop_pay" style="display:none;">
-	<?include_once(G5_THEME_PATH.'/service_payload.php');?>
-</section>
-
-
+ 
 
 <!-- Home Section -->
 <section id="home" class="main-visual">
-    
-	 <!--<div class="overlay fadeout"></div>-->
-     <!--<div id="particles-js"></div>-->
+<!--     
+	 <div class="overlay fadeout"></div>
+     <div id="particles-js"></div> -->
 
      <div class="container" >
           <div class="row">
-               <article class="col-md-6 col-xs-7 col-12">
+               <div class="col-sm-5 col-12 main_video_title">
 			   		
-			   		<h2 class="to-animate">치킨,요리가되다</h2>
-					<h4 class="to-animate">푸라닭 치킨</h4>
-					<h4 class="to-animate">
-						<iframe width='443px' height='294px'; id=ytPlayer src=https://www.youtube.com/embed/?playlist=<?php echo $youtube_id; ?>&loop=1&autoplay=1&mute=1&showinfo=0&modestbranding=0&disablekb=1&controls=1  showinfo=0 frameborder=0 allowfullscreen></iframe>
-					</h4>
+			   		<div class="to-animate main_title"><img src='<?=G5_THEME_URL?>/img/new/1/0_main_title.png' alt='치킨,요리가되다 푸라닭치킨'/></div>
+					<div class="to-animate video-wrap">
+						<!-- <iframe width='443px' height='294px'; id=ytPlayer src=https://www.youtube.com/embed/?playlist=<?php echo $youtube_id; ?>&loop=1&autoplay=1&mute=1&showinfo=0&modestbranding=0&disablekb=1&controls=1  showinfo=0 frameborder=0 allowfullscreen></iframe> -->
+							<!-- <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/vFUpzUs8WE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+							<iframe id="video" src="https://www.youtube.com/embed/vFUpzUs8WE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
 <!-- 
                     <a href="javascript:moveTo('#main_request');" class="smoothScroll btn btn10"><span>가맹문의</span> <div class="transition"></div></a>
 					<a class="smoothScroll btn popbtn btn10"><span>가맹비용</span> <div class="transition"></div></a> -->
-               </article>
+			   </div>
           </div>
      </div>
 </section>
 
 
+<script>
+	/* var $videoIframe = document.getElementById('video');
+	var responsiveHeight = $videoIframe.offsetWidth * 0.50
 
-<!-- Blog Section -->
+	//브라우저 리사이즈 시 iframe 높이값 비율에 맞게 세팅
+	window.addEventListener('resize', function(){
+		responsiveHeight = $videoIframe.offsetWidth * 0.50;
+		$videoIframe.setAttribute('height', responsiveHeight);
+	}); */
+</script>
 
 
 <?php
 include_once(G5_THEME_PATH.'/main2/main.php');
-include_once(G5_THEME_PATH.'/main2/main_design_brand.php');
+include_once(G5_THEME_PATH.'/main2/main_shop_menu.php');
 include_once(G5_THEME_PATH.'/main2/prize_slide.php');
-include_once(G5_THEME_PATH.'/main2/main_banner_menu.php');
+include_once(G5_THEME_PATH.'/main2/main_advantage.php');
 ?>
 
 
@@ -335,6 +336,39 @@ function checkFrm(obj) {
 		$('html, body').animate({scrollTop: jbOffset['top']}, 300);
 		}
 	)};
+
+	var animation = function () {
+		var items, winH;
+		
+		var initModule = function () {
+			items = document.querySelectorAll(".to-animate");
+			winH = window.innerHeight;
+			_addEventHandlers();
+		}
+		
+		var _addEventHandlers = function () {
+			window.addEventListener("scroll", _checkPosition);
+			window.addEventListener("load", _checkPosition);
+			window.addEventListener("resize", initModule);
+		};
+		
+		var _checkPosition = function () {
+			for (var i = 0; i < items.length; i++) {
+			var posFromTop = items[i].getBoundingClientRect().top;
+			if (winH > posFromTop) {
+				items[i].classList.add("active");
+			}else{
+				items[i].classList.remove("active");
+			}
+			}
+		}
+		
+		return {
+			init: initModule
+		}
+	}
+	
+	animation().init();
 </script>
 
 
