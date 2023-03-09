@@ -36,7 +36,7 @@ if(defined('_INDEX_')) { // index에서만 실행
 
 <!-- Navigation section  -->
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<!-- <div class="navbar navbar-default navbar-fixed-top" role="navigation">
      <div class="container">
 
           <div class="navbar-header">
@@ -50,11 +50,7 @@ if(defined('_INDEX_')) { // index에서만 실행
 
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right " >
-					<!--
-                    <li class="active">
-						<a href="<? echo G5_URL ?>" >HOME</a>
-					</li>
-					-->
+					
 					<?php
 					$sql = " select *
 								from {$g5['menu_table']}
@@ -71,21 +67,13 @@ if(defined('_INDEX_')) { // index에서만 실행
 						<a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" ><?php echo $row['me_name'] ?></a>
 					</li>
 					<?}?>
-<!--
-					<?php if ($is_member) {  ?>
-                    <li><a href="<?php echo G5_BBS_URL ?>/logout.php" >Logout</a></li>
-                    <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php" >My page</a></li>
-					<?} else {?>
-                    <li><a href="<?php echo G5_BBS_URL ?>/login.php" >Login</a></li>
-                    <li><a href="<?php echo G5_BBS_URL ?>/register.php" >Register</a></li>
-					<?}?>
--->
+
 
                </ul>
           </div>
 
 	</div>
-</div>
+</div> -->
 
 
 

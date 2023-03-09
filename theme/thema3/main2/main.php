@@ -2,7 +2,7 @@
 <section id="main-brand" class="main-brand">
      <div class="container">
           <div class="row">
-				<div class='col-xs-12'><img src="<?php echo G5_THEME_URL; ?>/img/new/2/main_2_slogan.jpg" alt="푸라닭을 선택해야 하는 이유!" title=""></div>
+				<div class='col-xs-12'><img src="<?php echo G5_THEME_URL; ?>/img/new/2/main_2_title.png" alt="푸라닭을 선택해야 하는 이유!" title=""></div>
           </div>
      </div>
 </section>
@@ -32,7 +32,7 @@
 <section id="main-map_contract" class="main-map_contract">
     <div class="container">
 		<div class='row'>
-			<article class="to-animate col-xs-12 map_contract_title text-center">
+			<article class="to-animate col-xs-11 col-sm-8 map_contract_title text-center">
 				<img src="<?=G5_THEME_URL?>/img/new/4/4_map_contract_title.png" alt="푸라닭치킨 컨설팅 계약 770호점 돌파!"/>
 			</article>
 			<div class='to-animate col-xs-12 map_contract'>

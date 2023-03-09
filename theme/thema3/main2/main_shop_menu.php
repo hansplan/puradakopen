@@ -21,11 +21,18 @@
 				<img src="<?=G5_THEME_URL?>/img/new/5/5_shop_prized.png" alt="2023년 1월 매출 TOP5매장"/>
 			</article>
 
-			<div class='to-animate col-xs-6 shop_list'>
-				<img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list.png" alt=""/>
+			<div class='to-animate col-xs-12 col-sm-6 shop_list'>
+				<!-- <img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list.png" alt=""/> -->
+				<ul>
+					<li><span class='bullet num_1'><img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list_bullet_01.png" alt=""/></span>강남구 OO점 - 113,212,270원</li>
+					<li><span class='bullet num_2'><img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list_bullet_02.png" alt=""/></span>관악구 OO점 - 113,073,650원</li>
+					<li><span class='bullet num_3'><img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list_bullet_03.png" alt=""/></span>광명시 OO점 - 110,884,280원</li>
+					<li><span class='bullet num_4'><img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list_bullet_04.png" alt=""/></span>강북구 OO점 - 108,116,440원</li>
+					<li><span class='bullet num_5'><img src="<?=G5_THEME_URL?>/img/new/5/5_shop_list_bullet_05.png" alt=""/></span>화성시 OO점 - 100,743,060원</li>
+				</ul>
 			</div>
 
-			<div class='to-animate col-xs-6 shop_img'>
+			<div class='to-animate col-xs-12 col-sm-6 shop_img'>
 				<img src="<?=G5_THEME_URL?>/img/new/5/5_shop_front_img.png" alt="" title="푸라닭 치킨 매장 이미지"/>
 			</div>
 

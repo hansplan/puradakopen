@@ -6,7 +6,8 @@
      <div class="container">
         <div class="row">
             <article class="col-xs-12 text-center">
-				<h2><img src="<?=G5_THEME_URL?>/img/new/8/prize_title.png" title="AWARD HISTORY"/></h2>
+				<!-- <h2><img src="<?=G5_THEME_URL?>/img/new/8/prize_title.png" title="AWARD HISTORY"/></h2> -->
+                <h2>AWARD HISTORY</h2>
 			</article>
 
             <div class="col-xs-12 swiper" >
@@ -62,12 +63,13 @@
 
 
 <style>
-    .prize{background:#eee}
+    .prize{background:#eee;color:black}
+    .prize h2{font-weight:600;letter-spacing: -1px;}
     .prize .container{padding:40px 0;}
     .swiper{width:100%;height:300px;margin-left:10px;}
     .swiper .swiper-pagination{margin:30px 0;}
     .swiper img{text-align:center;margin:0 auto;display:block}
-    .swiper .swiper-pagination-bullet-active{background:#dda246;width:12px;height:12px;vertical-align:middle}
+    .swiper .swiper-pagination-bullet-active{background:#dda246;width:12px;height:12px;vertical-align:middle;margin-top:2px;}
 </style>
 
 <script>
