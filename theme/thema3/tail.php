@@ -105,9 +105,9 @@ wptg_tagscript_vars.push(
 			moveTo('#main_request');
 		});
 		
-		$('.agree_btn').bind('click', function(e) {
+		/* $('.agree_btn').bind('click', function(e) {
 			$('#agreement_con').slideToggle(200);
-		});
+		}); */
 
 		$('.nav li').eq(0).bind('click', function(e) {
 			moveTo('#main-brand_line');

@@ -747,7 +747,9 @@ footer .footer-copyright {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #f08418;
+			/* background-color: #f08418; */
+			background-color: #d6b166;
+			/* background: linear-gradient(180deg, #d6b166, #fdfad1, #d6b166); */
 		}
 
 		input[type="submit"]:active,
@@ -1141,7 +1143,8 @@ sub {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #ff6600;
+			/* background: #ff6600; */
+			background: #d6b166;
 			border-color: #3d4449;
 			color: #ffffff;
 			content: '\f00c';

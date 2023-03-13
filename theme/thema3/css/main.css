@@ -599,18 +599,18 @@ h4.desc{
 #quickmenu{right:30px;top:273px;position:absolute;width:120px;z-index: 10;}
 
 #agreement_con{
-	display:none;
+	/* display:none; */
 }
 
 .agreement_txt{
 	border:1px solid #fff;
-	min-height:300px;
+	min-height:120px;
 	background:#fff;
 	overflow:auto;
 }
 
 #main_request{
-	padding:30px 0;
+	padding:30px 0 90px;
 	background:url('../img/new/15/main_15_bg_pattern.jpg');
 	color:white;
 }
@@ -619,13 +619,15 @@ h4.desc{
 
 
 .contact_btn{
-	padding:0 112px;
+	/* padding:0 112px; */
 	background:#b9905e;
 	border:0;
 	border-radius:0;
 	color:white;
 	box-shadow:none;
-	font-size:20px;
+	font-size:27px;
+	line-height:27px;
+	width:inherit;
 }
 
 
@@ -665,9 +667,9 @@ h4.desc{
 	color:white;
 	padding-top:0;
 		padding-bottom:0;
-
 }
 
+#main_request label.check_label{font-size:0.9em;}
 .white{color:white !important}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -681,6 +683,9 @@ h4.desc{
 #main_request label{
     color:white;
     margin:0 0 0 0;
+	font-size:1.1em;
+	font-weight:500;
+	margin-bottom:2px;
 }
 
 #main_request .text-in{margin-top:20px;}
@@ -693,23 +698,27 @@ h4.desc{
     vertical-align: bottom;
     line-height: 20px;
 }
+#main_request .select_location>div{
+	padding-left:0; padding-right:0;
+}
 
-#main_request .select_sido{
-	text-align:right;
+#main_request .select_location>div.select_sido{
+	padding-right:20px;
 
 }
 
 #main_request .contact_agree{
-	clear:both;
+	/* clear:both;
 	padding:20px 0 ;
-	display: flex;
+	display: flex; */
+	margin-top:0;
 }
 
 #main_request .contact_form:after{
 	clear:both;
 }
 
-#main_request .select_sido label.forD{
+/* #main_request .select_sido label.forD{
 	color:white;
 	display:inline-block;
 	vertical-align:middle;
@@ -719,7 +728,7 @@ h4.desc{
 	padding-top:10px;
 	float:left;
 }
-
+ */
 #pop_pay{display:none;}
 
 #main_request .placeholer{
@@ -795,9 +804,9 @@ h4.desc{
 
 @media screen and (max-width: 1200px) {
 	#main-brand_chart img{width:100%;}
-	#main_request .select_sido label.forD{
+	/* #main_request .select_sido label.forD{
 		position:relative;margin-top:-30px; 
-	}
+	} */
 
 	.main-sales_shop_list .shop_list li{
 		font-size:1.6em;
@@ -812,6 +821,8 @@ h4.desc{
 	.shop_interior .interior_img{padding:2%;}
 	/* .shop_interior li{display: inline-block;}
 	.shop_interior li:not(:last-child){margin-right:18px;} */
+
+	.banner_left_img img{width:100%;}
 }
 
 @media screen and (max-width: 993px) {
@@ -842,10 +853,12 @@ h4.desc{
 	}
 	.main_AD img{width:100%;}
 
+	.banner_left_img{padding-left:30px;padding-right:30px;margin-bottom:30px;}
+
 	#main_request .contact_form{clear:both;margin-top:40px;float:left;width:100%;}
 	#main_request .contact_form .forD{float:left;}
 	#main_request  .main_contact .col-md-25.select_box{height:auto;}
-	#main_request .select_sido label.forD{clear:both;position:relative;width:100%;text-align:left;}
+	/* #main_request .select_sido label.forD{clear:both;position:relative;width:100%;text-align:left;} */
 	#main_request .container .text-box_con{width:100%;}
 	
 	#quickmenu{top:100px;right:10px;}
@@ -956,10 +969,6 @@ h4.desc{
 		float:left;
 	}
 
-	#main_request  .main_contact .select_sido{
-		padding-right:0;
-	}
-
 	#main_request  .main_contact .col-md-50{
 		width:50%;
 		min-height:50px;
@@ -981,9 +990,9 @@ h4.desc{
 @media screen and (min-width: 1201px){
 	
 	#main_request .Address_D{
-		width:70%;display:inline-block;
+		/* width:70%;display:inline-block; */
 	}
-	#main_request .Address_D.col-xs-6{width:70%}
+	/* #main_request .Address_D.col-xs-6{width:70%} */
 	#main_request .sub_label{font-size:0.5em;line-height:15px;display:block;}
 
 	#main_request .text_box, #main_request .select_box{

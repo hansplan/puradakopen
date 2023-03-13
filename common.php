@@ -596,7 +596,9 @@ if (G5_IS_MOBILE) {
     $faq_skin_path      = get_skin_path('faq', $config['cf_mobile_faq_skin']);
     $faq_skin_url       = get_skin_url('faq', $config['cf_mobile_faq_skin']);
 } else {
-    $board_skin_path    = get_skin_path('board', $board['bo_skin']);
+    // $board_skin_path    = get_skin_path('board', $board['bo_skin']);
+    
+    $board_skin_path    = get_skin_path('board', $board['bo_skin'],'f');
     $board_skin_url     = get_skin_url('board', $board['bo_skin']);
     $member_skin_path   = get_skin_path('member', $config['cf_member_skin']);
     $member_skin_url    = get_skin_url('member', $config['cf_member_skin']);

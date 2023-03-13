@@ -187,7 +187,7 @@ function pathway($way){
 		<style>
 			
 			.add_con dt, .add_con dd{display:inline-block;line-height:30px;font-size:1.2em}
-			.add_con dt{clear:both;text-align:right;width:100px;vertical-align:top;}
+			.add_con dt{clear:both;text-align:right;width:150px;vertical-align:top;}
 			.add_con dd{font-weight:bolder; margin-left:20px;text-align:center;}
 
 
@@ -222,8 +222,10 @@ function pathway($way){
 
         <!-- 본문 내용 시작 { -->
         <div id="bo_v_con"><?php echo get_view_thumbnail($view['content']); ?></div>
-        <?php//echo $view['rich_content']; // {이미지:0} 과 같은 코드를 사용할 경우 ?>
-			
+		
+        <div class="add_con"><dt>개인정보동의 : </dt><dd><?print_r($view['wr_6'])?> (<?=$view['wr_datetime']?>)</dd></div>
+        <div class="add_con"><dt>개인정보3자제공 : </dt><dd><?print_r($view['wr_8'])?> (<?=$view['wr_datetime']?>)</dd></div>
+
 		<div class="add_con"><dt>이름 : </dt><dd><?print_r($view['wr_1'])?></dd></div>
 		<div class="add_con"><dt>연락처 : </dt><dd><?= add_hyphen(($view['wr_2']))?></dd></div>
 		<div class="add_con"><dt>창업예산 : </dt><dd><? Num_String($view['wr_3'])  ?></dd></div>

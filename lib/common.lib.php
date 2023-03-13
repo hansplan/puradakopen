@@ -3229,13 +3229,17 @@ function get_device_change_url()
 }
 
 // 스킨 path
-function get_skin_path($dir, $skin)
+function get_skin_path($dir, $skin, $f_thmeme = '')
 {
     global $config;
 
     if(preg_match('#^theme/(.+)$#', $skin, $match)) { // 테마에 포함된 스킨이라면
         $theme_path = '';
-        $cf_theme = trim($config['cf_theme']);
+        if($f_thmeme !=''){
+            $cf_theme = 'thema3';
+        }else{
+            $cf_theme = trim($config['cf_theme']);
+        }
 
         $theme_path = G5_PATH.'/'.G5_THEME_DIR.'/'.$cf_theme;
         if(G5_IS_MOBILE) {

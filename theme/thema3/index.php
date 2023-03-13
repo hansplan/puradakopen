@@ -9,7 +9,7 @@ if (G5_IS_MOBILE) {
 
 
 include_once(G5_THEME_PATH.'/head.php');
-$youtube_id = 'bjwQZDtH7rk';
+$youtube_id = 'vFUpzUs8WE4';
 
 ?>
 
@@ -41,7 +41,7 @@ $youtube_id = 'bjwQZDtH7rk';
 					<div class="to-animate video-wrap">
 						<!-- <iframe width='443px' height='294px'; id=ytPlayer src=https://www.youtube.com/embed/?playlist=<?php echo $youtube_id; ?>&loop=1&autoplay=1&mute=1&showinfo=0&modestbranding=0&disablekb=1&controls=1  showinfo=0 frameborder=0 allowfullscreen></iframe> -->
 							<!-- <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/vFUpzUs8WE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-							<iframe id="video" src="https://www.youtube.com/embed/vFUpzUs8WE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe id="video" src="https://www.youtube.com/embed/<?=$youtube_id?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 <!-- 
                     <a href="javascript:moveTo('#main_request');" class="smoothScroll btn btn10"><span>가맹문의</span> <div class="transition"></div></a>
@@ -77,23 +77,53 @@ function checkFrm(obj) {
 
 
  if(obj.wr_6.checked == false) {
-  alert('개인정보 수집 동의에 체크해주세요.',0);
+  alert('개인정보 수집 및 이용 동의에 체크해주세요.',0);
   obj.wr_6.focus();
   return false;
  }
 
- 
-	if (!jQuery('#g-recaptcha-response').val()) {
-		alert('자동등록방지에 체크해주세요.',0);
-		jQuery('#g-recaptcha-response').focus();
-		return false;
-	}
+ if(obj.wr_8.checked == false) {
+  alert('개인정보 제3자 제공 동의에 체크해주세요.',0);
+  obj.wr_8.focus();
+  return false;
+ }
 
+ if(obj.wr_1.value == '') {
+  alert('이름을 입력해주세요.',0);
+  obj.wr_1.focus();
+  return false;
+ }
+
+ if(obj.wr_2.value == '') {
+  alert('연락처를 입력해주세요("-"를 빼고 숫자만 입력해주세요).',0);
+  obj.wr_2.focus();
+  return false;
+ }
+
+ if(obj.path.value == '') {
+  alert('푸라닭 창업을 생각하게 된 계기를 선택해주세요.',0);
+  obj.path.focus();
+  return false;
+ }
+
+ if(obj.sido1.value == '시/도 선택') {
+  alert('지역을 선택해주세요.',0);
+  obj.sido1.focus();
+  return false;
+ }
+
+ 
+/* if (!jQuery('#g-recaptcha-response').val()) {
+	alert('자동등록방지에 체크해주세요.',0);
+	jQuery('#g-recaptcha-response').focus();
+	return false;
+} */
 
 }
 </script>
 
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <section id="main_request" class="main_request">
      <div class="container">
@@ -105,11 +135,11 @@ function checkFrm(obj) {
 			</div> -->
 
 			<div class="main_contact">
-				<div class='col-xs-12 col-md-6 text-center'>
+				<div class='col-xs-12 col-md-6 text-center banner_left_img'>
 					<img src="<?=G5_THEME_URL?>/img/new/15/main_15_left_banner.jpg"/>
 				</div>
 
-				<form action="<?=G5_BBS_URL?>/write_update.php" class="" id="reservation_form" method="post" onsubmit="return checkFrm(this);">
+				<form action="<?=G5_BBS_URL?>/write_update3.php" class="" id="reservation_form" method="post" onsubmit="return checkFrm(this);">
 				<input type='hidden' name='bo_table' value="reservation">
 				<input type='hidden' name='token' value='<?php echo get_write_token("reservation"); ?>'>
 				<input type='hidden' name='wr_subject' value='<?=date("Y-m-d H:i:s",time()); ?>'>
@@ -117,7 +147,38 @@ function checkFrm(obj) {
 				<input type='hidden' name="wr_name" value="이름"  placeholder="이름">
 				<input type='hidden' name="wr_7" value="1" >
 					
+
 					<fieldset class="col-xs-12 col-md-6"> 
+
+						<div class="col-xs-12 text-in contact_agree">
+							
+							<label for="">개인정보 수집 및 이용 동의<i class='require'>*</i></label> 
+							<!-- <a class="btn btn-success agree_btn"> 내용확인</a> -->
+					
+							<div id="agreement_con" >
+								<div class="agreement_txt">
+									<iframe src="<?php echo G5_THEME_URL; ?>/agreement.php" frameborder="0" width="100%" height="120" marginwidth="0" marginheight="0" scrolling="yes" ></iframe>
+								</div>
+							</div>
+
+							<input type="checkbox" id="agree" name="wr_6" value="동의" />
+							<label for="agree" class='mt10 check_label'>개인정보 수집 및 이용에 동의합니다.</label> 
+						</div>
+
+
+						<div class="col-xs-12 text-in marketing_agree mt20">
+							<label for="">개인정보 제3자 제공 동의<i class='require'>*</i></label> 
+					
+							<div id="agreement_con" >
+								<div class="agreement_txt">
+									<iframe src="<?php echo G5_THEME_URL; ?>/marketing_agree.php" frameborder="0" width="100%" height="120" marginwidth="0" marginheight="0" scrolling="yes" ></iframe>
+								</div>
+							</div>
+
+							<input type="checkbox" id="marketing_agree" name="wr_8" value="동의" />
+							<label for="marketing_agree" class='mt10  check_label'>개인정보 제3자 제공에 동의합니다.</label> 
+						</div>
+
 						<div class="col-xs-12 text-in">
 							
 							<label for="" class="">이름 <i class='require'>*</i></label>
@@ -130,25 +191,40 @@ function checkFrm(obj) {
 						</div>
 
 						<div class="col-xs-12 text-in">
-							<label for="" class="">보유자본금</label>
-							<input type="text" value="" name="wr_3" placeholder="보유자본금">
+							<label for="" class="">푸라닭 창업을 생각하게 된 계기<i class='require'>*</i></label>
+
+							<select name="path" class="custom-select" required >
+								<option value="">선택해주세요</option>
+								<option value="0">네이버 블로그 또는 창업 카페</option>
+								<option value="1">네이버 검색</option>
+								<option value="2">다음검색</option>
+								<option value="3">인터넷 배너 광고</option>
+								<option value="4">페이스북, 인스타그램</option>
+								<option value="5">유튜브</option>
+								<option value="6">카카오 플러스 친구</option>
+								<option value="7">TV,라디오 광고</option>
+								<option value="8">신문 광고</option>
+								<option value="9">창업박람회</option>
+								<option value="10">매장 방문</option>
+								<option value="11">지인 소개</option>
+								<option value="12">창업컨설턴트</option>
+								<option value="13">기타(재상담고객)</option>
+							</select>
 						</div>
-						
 
 
+						<div class="col-xs-12 text-in select_location">
+							<label for="" class="" >희망지역<i class='require'>*</i>
+									<!-- <span class="sub_label">(선택)</span> -->
+							</label>
 
-						<div class="contact_form text-in">
 							<div class="col-xs-6 select_sido">
-								<label for="sido1" class="text-right forD" >희망지역
-									<span class="sub_label">(선택)</span>
-								</label>
-
-								<select class="Address_D col-xs-6 custom-select" id="sido1" title="전체" name="sido1" ></select>
+								<select class="Address_D custom-select" id="sido1" title="전체" name="sido1" required ></select>
 							</div>
 
 							<div class="col-xs-6">
 								<label for="gugun1" class="hide" class="sound_only">세부지역(시/구/군)</label>
-								<select class="Address_S custom-select" id="gugun1" title="선택하세요" name='gugun1'></select>
+								<select class="Address_S custom-select" id="gugun1" title="선택하세요" name='gugun1' required></select>
 							</div>
 						</div>
 						
@@ -208,7 +284,7 @@ function checkFrm(obj) {
 							</script>
 
 
-						<div class="col-xs-12 container">
+						<!-- <div class="col-xs-12 container">
 
 							<div class="col-xs-12 select_container">
 
@@ -278,33 +354,23 @@ function checkFrm(obj) {
 										<input type="checkbox" id="o14" name="path[13]" title="기타(직접입력)"/>
 								     <label for="o14"><span>기타 (재상담고객)</span></label>
 								
-									<!--<textarea name="path[7]" id="" class="contact_txt"  placeholder="내용" style=""></textarea>-->
 								</div>
 								</div>
 
 							</div>
+						</div> -->
+
+						<div class="col-xs-12 text-in">
+							<label for="" class="">보유자본금</label>
+							<input type="text" value="" name="wr_3" placeholder="보유자본금">
 						</div>
 
-						<section class="contact_agree text-center">
-							<div class="col-xs-12 container">
-								
-								<input type="checkbox" id="agree" name="wr_6" value="동의" />
-								<label for="agree"><span>개인정보 수집동의</span></label> 
-								<a class="btn btn-success agree_btn"> 내용확인</a>
-						
-								<div id="agreement_con" >
-									 <div class="agreement_txt">
-										<iframe src="<?php echo G5_THEME_URL; ?>/agreement.php" frameborder="0" width="100%" height="300" marginwidth="0" marginheight="0" scrolling="yes" ></iframe>
-									</div>
-								</div>
-								
-							</div>
-						 </section>
 							
-						<div class="g-recaptcha" data-sitekey="6Lcaa4cUAAAAAP4PkZmgv_i-eWldfD9i8F0FLXVc"></div>
+						<!-- <div class="g-recaptcha" data-callback="onHuman" data-sitekey="6Lcaa4cUAAAAAP4PkZmgv_i-eWldfD9i8F0FLXVc"></div>
+						<INPUT type="hidden" id="captcha" name="captcha" value=""> -->
 
 						<div class="col-xs-12" style="margin-top:30px;">
-							<div class="row text-center"><button class="contact_btn">문의하기</button></div>
+							<button class="contact_btn submit_btn">확인</button>
 						</div>
 
 					</fieldset>
@@ -336,6 +402,14 @@ function checkFrm(obj) {
 		$('html, body').animate({scrollTop: jbOffset['top']}, 300);
 		}
 	)};
+
+	function onHuman(response) {
+    	document.getElementById('captcha').value = response;
+  	}
+
+	/* $(".submit_btn").on("click",function(){
+		reservation_form.submit();
+	}); */
 
 	var animation = function () {
 		var items, winH;

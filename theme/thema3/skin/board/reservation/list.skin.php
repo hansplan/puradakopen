@@ -137,6 +137,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <th scope="col" style='width:10%;' >창업예산(선택)</th>
 			<th scope="col" style='width:15%;' >희망지역(선택)</th>
 			<th scope="col"  >창업계기</th>
+            <th scope="col"  >개인정보동의</th>
+            <th scope="col"  >3자제공동의</th>
             <!--<th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜</a></th>-->
             
             <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천</a></th><?php } ?>
@@ -194,12 +196,14 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			<td class="td_chk">
                <a href="/adm/bbs/board.php?bo_table=reservation&wr_id=<?=$list[$i]['wr_id']?>"><?php status($list[$i]['wr_7']); ?></a>
             </td>
-            <td class="td_name sv_use">  <a href="/adm/bbs/board.php?bo_table=reservation&wr_id=<?=$list[$i]['wr_id']?>"><?php echo $list[$i]['wr_1'] ?></a></td>
+            <td class="td_name sv_use">  <a href="/adm/bbs/board.php?bo_table=reservation&wr_id=<?=$list[$i]['wr_id']?>"><strong><?php echo $list[$i]['wr_1'] ?></strong></a></td>
             <td class="td_date"><?php echo add_hyphen($list[$i]['wr_2']) ?></td>
             <td class="td_num"><?php echo  $list[$i]['wr_3'] ?></td>
 			<td class="td_num"><?php echo $list[$i]['wr_4'] ?></td>
 			
 			<td class="td_path"><?php pathway($list[$i]['wr_5'])?></td>
+            <td class="td_num"><?php echo $list[$i]['wr_6']?></td>
+            <td class="td_num"><?php echo $list[$i]['wr_8']?></td>
 
 			<!--
             <td class="td_date"><?php echo $list[$i]['datetime2'] ?></td>
